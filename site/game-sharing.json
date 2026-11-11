@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "publicationOrigin": "https://hearthfall-nmcrbsbx.manus.game",
+  "title": "Hearthfall Colony",
+  "description": "A pixel-art base-building colony simulation where every need, mood, meal, storm, and relationship is simulated.",
+  "defaultCaptions": {},
+  "assets": {
+    "favicon": {
+      "digest": "sha256:7234a7bc3309b3da43b9157a7851835af6209af2f3d088ba769a607c0b31c91b",
+      "path": "share/7234a7bc3309b3da43b9157a7851835af6209af2f3d088ba769a607c0b31c91b.png",
+      "mime": "image/png",
+      "width": 384,
+      "height": 384,
+      "sizeBytes": 243190
+    }
+  }
+}

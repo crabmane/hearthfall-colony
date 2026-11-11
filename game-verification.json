@@ -3,8 +3,8 @@
   "checks": [
     {
       "kind": "scene",
-      "path": "res://test/test_suite.tscn",
-      "expect": "[game-generic-tests] PASS:",
+      "path": "res://test/hearthfall_smoke.tscn",
+      "expect": "[hearthfall-smoke] PASS:",
       "profile": "source"
     },
     {

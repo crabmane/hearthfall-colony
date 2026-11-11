@@ -1,0 +1,12 @@
+{
+  "webhookUrl": "https://api.manus.im/api/webhook/triggers/d7d93c9b-dbe8-4673-a1d0-1cbbb62917dc",
+  "events": [
+    "new_player_account",
+    "cloud_save_uploaded",
+    "cloud_save_failed",
+    "colony_game_over",
+    "severe_colony_alert",
+    "leaderboard_published",
+    "auth_error"
+  ]
+}

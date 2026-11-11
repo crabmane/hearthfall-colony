@@ -1,0 +1,79 @@
+extends Node
+## HTML must await ManusAuth.prepare() before engine.startGame().
+signal auth_state_changed(state: Dictionary)
+signal auth_error(code: String)
+signal rpc_completed(request_id: int, result: Dictionary)
+
+var _bridge
+var _callback
+var _on_change
+var _rpc_bridge
+var _rpc_callback
+var _rpc_seq: int = 0
+
+func _ready() -> void:
+	if not OS.has_feature("web"):
+		auth_error.emit("online_preview_required")
+		return
+	_bridge = JavaScriptBridge.get_interface("ManusAuth")
+	if _bridge == null:
+		auth_error.emit("auth_bootstrap_missing")
+		return
+	_callback = JavaScriptBridge.create_callback(_completed)
+	_on_change = JavaScriptBridge.create_callback(_changed)
+	_rpc_bridge = JavaScriptBridge.get_interface("HearthfallRPC")
+	_rpc_callback = JavaScriptBridge.create_callback(_rpc_done)
+	JavaScriptBridge.get_interface("window").addEventListener("manus-auth-change", _on_change)
+	auth_state_changed.emit(get_session())
+
+func _exit_tree() -> void:
+	if _on_change != null:
+		JavaScriptBridge.get_interface("window").removeEventListener("manus-auth-change", _on_change)
+
+func get_session() -> Dictionary:
+	if _bridge == null:
+		return {"status": "unavailable", "user": null}
+	var value = JavaScriptBridge.get_interface("JSON").stringify(_bridge.get_session())
+	var parsed = JSON.parse_string(str(value))
+	return parsed if parsed is Dictionary else {"status": "unavailable", "user": null}
+
+func login() -> void:
+	_run("login")
+
+func logout() -> void:
+	_run("logout")
+
+# Call directly from a button/input handler to preserve browser user activation.
+func open_standalone() -> void:
+	if _bridge == null:
+		auth_error.emit("auth_bootstrap_missing")
+		return
+	_bridge.open_standalone()
+
+func call_rpc(kind: String, procedure: String, input: Dictionary = {}) -> int:
+	if _rpc_bridge == null:
+		rpc_completed.emit(-1, {"ok": false, "error": "auth_bootstrap_missing"})
+		return -1
+	_rpc_seq += 1
+	var request_id := _rpc_seq
+	_rpc_bridge.call(kind, procedure, JSON.stringify(input), request_id, _rpc_callback)
+	return request_id
+
+func _run(operation: String) -> void:
+	if _bridge == null:
+		auth_error.emit("auth_bootstrap_missing")
+		return
+	# Retain the Godot callback until the Promise settles; no token crosses the bridge.
+	_bridge.invoke(operation, _callback)
+
+func _completed(args: Array) -> void:
+	if not str(args[0]).is_empty():
+		auth_error.emit(str(args[0]))
+
+func _changed(_args: Array) -> void:
+	auth_state_changed.emit(get_session())
+
+func _rpc_done(args: Array) -> void:
+	var request_id := int(args[0]) if args.size() > 0 else -1
+	var parsed = JSON.parse_string(str(args[1])) if args.size() > 1 else null
+	rpc_completed.emit(request_id, parsed if parsed is Dictionary else {"ok": false, "error": "invalid_rpc_response"})

@@ -1,0 +1,19 @@
+{
+  "schema": "manus.game.backend-contract/v1",
+  "deploy": {
+    "mode": "hybrid",
+    "dockerfilePath": "server/Dockerfile",
+    "healthPath": "/api/health"
+  },
+  "routes": [
+    { "path": "/api/*", "target": "server" },
+    { "path": "/*", "target": "static" }
+  ],
+  "api": { "protocolVersion": 1 },
+  "database": { "schemaVersion": 2 },
+  "boards": [
+    { "id": "survival-days-v1", "rulesVersion": "v1" },
+    { "id": "population-v1", "rulesVersion": "v1" },
+    { "id": "mood-v1", "rulesVersion": "v1" }
+  ]
+}

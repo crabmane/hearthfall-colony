@@ -1,0 +1,2286 @@
+{
+  "backendContractSha256": "sha256:51a28e1a059df0770bc0895c597bd6612e5fb57a2ae0c48619d026684cedb9d7",
+  "schema": "manus.game.release/v1",
+  "engineVersion": "4.7.2.stable.official.ed1daf0bf",
+  "inputs": {
+    "objectFormat": "sha1",
+    "tree": "26b8a9cc116ecb01dadac60a2b5368d383a580db",
+    "entries": [
+      {
+        "path": ".gitignore",
+        "type": "file",
+        "mode": "100644",
+        "object": "30fef87c6f4fea47eeba577f52db0adcfa27f46c"
+      },
+      {
+        "path": ".manus-game-template.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "05ac4bbd1ca2b1ddbc2f431478cacb275e7c024d"
+      },
+      {
+        "path": ".manus-starter-init.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "353989d5bf35f796d7f8d0c3f6a8aa5592f7d1d4"
+      },
+      {
+        "path": "README.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "af4f4f1858b387fb93a14fa1569a9c04293827f1"
+      },
+      {
+        "path": "TODO.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "6cbdac4bfea5847d84b92fa9ca8ec0f474be4213"
+      },
+      {
+        "path": "assets.lock.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "b35626b3f9f16bfe052af1d4aa7f9ea5fbd5ff04"
+      },
+      {
+        "path": "assets/game/art/buildings_sheet.png",
+        "type": "managed",
+        "sha256": "sha256:49694697c716f949a3e4fa33ae01d4bf94b56d7052c94887849eae338725910d"
+      },
+      {
+        "path": "assets/game/art/buildings_sheet.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "88d9986f1d97927acc95e81b4a70046f450e4a75"
+      },
+      {
+        "path": "assets/game/art/colonists_sheet.png",
+        "type": "managed",
+        "sha256": "sha256:da551ccd63b1b5c56744fed5d29ee282ae595fdf29c23dfa5aa21ddcdeb0eab4"
+      },
+      {
+        "path": "assets/game/art/colonists_sheet.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a9ed8653d7bbe26e0048adf225deb85d31d1812d"
+      },
+      {
+        "path": "assets/game/art/nature_sheet.png",
+        "type": "managed",
+        "sha256": "sha256:587bf91812eacb1328f36ad2f32d8364541acff8a8abeb2f23c5de8a68cff7db"
+      },
+      {
+        "path": "assets/game/art/nature_sheet.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "b77d59771a70786b3b75797a867b530cfdcb2a94"
+      },
+      {
+        "path": "assets/game/art/resources_sheet.png",
+        "type": "managed",
+        "sha256": "sha256:a980e4556b1877efacd02cfea6956cedff5fb07f64668e66bc8dc34218cd4a72"
+      },
+      {
+        "path": "assets/game/art/resources_sheet.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "187dcdefa8078fd703d2db08da418f19bcdc392b"
+      },
+      {
+        "path": "assets/game/art/title_hearthfall.png",
+        "type": "managed",
+        "sha256": "sha256:7e06947ae10b3fb874f31ce5f2ef65005f08b5c5784d1f24616b2d8ccda5edb4"
+      },
+      {
+        "path": "assets/game/art/title_hearthfall.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "f41d76786ada4fc331f29b9cc1ea3e036945459b"
+      },
+      {
+        "path": "assets/game/art/wildlife_sheet.png",
+        "type": "managed",
+        "sha256": "sha256:cf212a30fb64968083b34e3d9eb015d6cac7f595ea96e6590de76172228b955b"
+      },
+      {
+        "path": "assets/game/art/wildlife_sheet.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "81fbe73c9fdc022200fd84a6247865b26e7b270c"
+      },
+      {
+        "path": "assets/game/sprites/axe.png",
+        "type": "managed",
+        "sha256": "sha256:effd31dc272edad25be2bbbcd9d6f7ca49e43bacddb972e2b0b86f1c815d47e5"
+      },
+      {
+        "path": "assets/game/sprites/axe.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "ef0a88f2f865c48735164cd23cb25593e49846b3"
+      },
+      {
+        "path": "assets/game/sprites/badger.png",
+        "type": "managed",
+        "sha256": "sha256:d1dae7a6eda2e3f9c35d8d64be65e4f5089f8a716d9ee2d587238eddf9c5d96a"
+      },
+      {
+        "path": "assets/game/sprites/badger.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "ff173d99852258ee97b0fca5881f21eca7bf06fd"
+      },
+      {
+        "path": "assets/game/sprites/bear.png",
+        "type": "managed",
+        "sha256": "sha256:ca11e52b0e87bfb812aa6781522c15b2647b8a358b825154cf478c9d06650a98"
+      },
+      {
+        "path": "assets/game/sprites/bear.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "f6bf7d98af4cb6d37ad59f2c21bec7d5edd75b63"
+      },
+      {
+        "path": "assets/game/sprites/beaver.png",
+        "type": "managed",
+        "sha256": "sha256:e58343592df62fcd74f05ab68af42d2be6a2b8c2ec93f3a49c94ebf37403026f"
+      },
+      {
+        "path": "assets/game/sprites/beaver.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "1944f6419fc38b1796ecc86571070c84f2ca3d15"
+      },
+      {
+        "path": "assets/game/sprites/berries.png",
+        "type": "managed",
+        "sha256": "sha256:38b9862455080e67dc13d0c7fe360af73b015dcfca50ebcc7cc8fe75c0c18475"
+      },
+      {
+        "path": "assets/game/sprites/berries.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "cfefbbbb0056cc3e7312573489bb715bf62c6f8e"
+      },
+      {
+        "path": "assets/game/sprites/berry_bush.png",
+        "type": "managed",
+        "sha256": "sha256:1daa3a3b742d571134d0d4cff86a12124bdf40bb21d545f24ec2f70929eb61de"
+      },
+      {
+        "path": "assets/game/sprites/berry_bush.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "886df73149b84ca7b3f0d9bbe309d6a55e0f4b1c"
+      },
+      {
+        "path": "assets/game/sprites/birch.png",
+        "type": "managed",
+        "sha256": "sha256:96c5da177294c9274ac29732535127d94a11e4473a8ed9252b8295daae5ea2d5"
+      },
+      {
+        "path": "assets/game/sprites/birch.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "6bb50eee816c4e667cd1ae4055d4af02d8edcbe4"
+      },
+      {
+        "path": "assets/game/sprites/boar.png",
+        "type": "managed",
+        "sha256": "sha256:d299f6639c8cb9c6f6a4c9052f151947af9ca303266d5fa9cadfc938c56b331a"
+      },
+      {
+        "path": "assets/game/sprites/boar.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "3d28ec899c7fb574643f4a79eb4449ef850d7a83"
+      },
+      {
+        "path": "assets/game/sprites/boulder.png",
+        "type": "managed",
+        "sha256": "sha256:87734a772b230cc82c171cd7ea6ee8bbd097dbd588140b062bb254c5ad4ff658"
+      },
+      {
+        "path": "assets/game/sprites/boulder.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "7be8aa0a87bd3a6934bf97c4d9fecba9cbd3de39"
+      },
+      {
+        "path": "assets/game/sprites/bread.png",
+        "type": "managed",
+        "sha256": "sha256:7a62edb5796527b02af75e530efcf54ea4d0012f91d9187f762767d271800824"
+      },
+      {
+        "path": "assets/game/sprites/bread.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "d78d74f092e49ac84a73179600aa5cacebb0dce2"
+      },
+      {
+        "path": "assets/game/sprites/cabin.png",
+        "type": "managed",
+        "sha256": "sha256:5ed2632f3772c860cb5cdd069e56dc87ae977ec3e6a0a307f9e0abf51712dab4"
+      },
+      {
+        "path": "assets/game/sprites/cabin.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "445993b61258fd5f595bc85aa12524d15482b21c"
+      },
+      {
+        "path": "assets/game/sprites/clay.png",
+        "type": "managed",
+        "sha256": "sha256:ac924ac804df7ec6f57f67839d288b52d2c15ba848cf922b4a859ef40c10b108"
+      },
+      {
+        "path": "assets/game/sprites/clay.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "d1ddfde80a0535cce66603b0c11ff81e2039d8d8"
+      },
+      {
+        "path": "assets/game/sprites/clay_deposit.png",
+        "type": "managed",
+        "sha256": "sha256:3b166f89aa197558f79640f22a611eb5cf0eef3572f564092fbebb2f78dc2e65"
+      },
+      {
+        "path": "assets/game/sprites/clay_deposit.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "d6603340e763f7e6c9c4e9b3e90705ed55aab776"
+      },
+      {
+        "path": "assets/game/sprites/clinic.png",
+        "type": "managed",
+        "sha256": "sha256:6b01a864c24ac2f8ec77a21b81609ce23d142c02a4f178c24814061dffc7afc6"
+      },
+      {
+        "path": "assets/game/sprites/clinic.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "5067f150b261829b81361f80a3abf7859da0b2bb"
+      },
+      {
+        "path": "assets/game/sprites/cloth.png",
+        "type": "managed",
+        "sha256": "sha256:221c9d521c389db9d8a750b6a13ce256a2e3009ece44038ce297fbe23eaec671"
+      },
+      {
+        "path": "assets/game/sprites/cloth.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "433a7166718ecaf29909895164fd2e0a1d485c90"
+      },
+      {
+        "path": "assets/game/sprites/coal.png",
+        "type": "managed",
+        "sha256": "sha256:f99c7a908e2a019c3616b91869bef77a7e29c142d36497b94714f882b21d80ba"
+      },
+      {
+        "path": "assets/game/sprites/coal.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "57abc8c4049fbec54645fb3fee6bcaf4b2ea1efc"
+      },
+      {
+        "path": "assets/game/sprites/coal_seam.png",
+        "type": "managed",
+        "sha256": "sha256:d1310f67c14ec9ffe006bbbf7397bc44994e6bc3f341be567705f916ad37f010"
+      },
+      {
+        "path": "assets/game/sprites/coal_seam.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "02c48b2c5f63713f9325491759d414ae8f10fdc8"
+      },
+      {
+        "path": "assets/game/sprites/colonist_00.png",
+        "type": "managed",
+        "sha256": "sha256:1e060b230fb853416c84a346b30225711b999409641aa0d0b2731ac2ce94ebc8"
+      },
+      {
+        "path": "assets/game/sprites/colonist_00.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "73e950080395b9b55101e02e924b999937b10d10"
+      },
+      {
+        "path": "assets/game/sprites/colonist_01.png",
+        "type": "managed",
+        "sha256": "sha256:c3d1d6778dc65506564c293784af4986f26280493ebf48c313e2d06a1049fea4"
+      },
+      {
+        "path": "assets/game/sprites/colonist_01.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "640da2b8ce51a0cf635cb11267eaceb17150364c"
+      },
+      {
+        "path": "assets/game/sprites/colonist_02.png",
+        "type": "managed",
+        "sha256": "sha256:b4d25af48cc0b69de47166439678876f9c33703dae346aba9ef11839f3c3b13c"
+      },
+      {
+        "path": "assets/game/sprites/colonist_02.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "339326882b42ef46f1f707b98b3f5e5bd5dbc983"
+      },
+      {
+        "path": "assets/game/sprites/colonist_03.png",
+        "type": "managed",
+        "sha256": "sha256:b78e63b232c6c7ad1b95c4936545dbc25752c7d0de6051f8c460a6ffc31e5ea4"
+      },
+      {
+        "path": "assets/game/sprites/colonist_03.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "19e9705034f791a1bbc1f719c0233c0ff72ba1fc"
+      },
+      {
+        "path": "assets/game/sprites/colonist_04.png",
+        "type": "managed",
+        "sha256": "sha256:82ecbc1158deba28f49cc82332e1ea0418f5c21de26cf1e6206d2bd905cb6f33"
+      },
+      {
+        "path": "assets/game/sprites/colonist_04.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "74b8443fb094473170003548cc3317047fcda150"
+      },
+      {
+        "path": "assets/game/sprites/colonist_05.png",
+        "type": "managed",
+        "sha256": "sha256:ef7c3c4266ea7176ca645399d09f4d3a25dddc8c5e55078476b346d936a276ca"
+      },
+      {
+        "path": "assets/game/sprites/colonist_05.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "d88d6f009fc13b2c8b2e7f959dc07648b079e3d3"
+      },
+      {
+        "path": "assets/game/sprites/colonist_06.png",
+        "type": "managed",
+        "sha256": "sha256:366ffd2a434c661a26541d111957a7c948db7d7893c7d044ef259cdd87de3049"
+      },
+      {
+        "path": "assets/game/sprites/colonist_06.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a986b7dca4c4555670d726dd85653b9780d7ed89"
+      },
+      {
+        "path": "assets/game/sprites/colonist_07.png",
+        "type": "managed",
+        "sha256": "sha256:42ba16b6a1ab671f9041c3bfde517e444b72ee5088821203614d72da67ab1523"
+      },
+      {
+        "path": "assets/game/sprites/colonist_07.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "ffc886116c456b1bfdc4a3b551da503d5f869c72"
+      },
+      {
+        "path": "assets/game/sprites/colonist_08.png",
+        "type": "managed",
+        "sha256": "sha256:51458eb0e957c493aed9713a4d54dcbc52afcd01b1eed6e3fe010bf86772786d"
+      },
+      {
+        "path": "assets/game/sprites/colonist_08.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "bf4bf182bb4c27ff1a56af8eab7ebb4a9d6b5014"
+      },
+      {
+        "path": "assets/game/sprites/colonist_09.png",
+        "type": "managed",
+        "sha256": "sha256:06e4c3ea62f6c4eb3e90dd850843575cb4fa1c7f1a4b5b053b1e3f1423ac1d04"
+      },
+      {
+        "path": "assets/game/sprites/colonist_09.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "150c6ed35904c7ba7e63e67bc38cbdb37eeafe59"
+      },
+      {
+        "path": "assets/game/sprites/colonist_10.png",
+        "type": "managed",
+        "sha256": "sha256:659a0fdaa92c70a6917be88a5831441db89644a913d095fc27bd70728fe4e706"
+      },
+      {
+        "path": "assets/game/sprites/colonist_10.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "e5b1c7f0659516045601dcc8a6dcf7ed2fe2fef9"
+      },
+      {
+        "path": "assets/game/sprites/colonist_11.png",
+        "type": "managed",
+        "sha256": "sha256:d30c664f6c8b80a056c71960a48a69179f56b24e988d411e81b074aac22baf72"
+      },
+      {
+        "path": "assets/game/sprites/colonist_11.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "c3c6609dbb1e1f6d607539945019fc1467c0911e"
+      },
+      {
+        "path": "assets/game/sprites/colonist_12.png",
+        "type": "managed",
+        "sha256": "sha256:ebdce66ef3833f2f885b3f8ece51376ec7e4284f2cf16c45e8083f8b01502b1d"
+      },
+      {
+        "path": "assets/game/sprites/colonist_12.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "15f9507f4d668b39736ef35c678f2ba8eecf6624"
+      },
+      {
+        "path": "assets/game/sprites/colonist_13.png",
+        "type": "managed",
+        "sha256": "sha256:6ee2b72a04973200744bf7ad1f73aadee2007c50177fd25e57545f2dfe714b77"
+      },
+      {
+        "path": "assets/game/sprites/colonist_13.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "040e1774f8e922e8338289c5dc72e9e5112120b2"
+      },
+      {
+        "path": "assets/game/sprites/colonist_14.png",
+        "type": "managed",
+        "sha256": "sha256:ee2204cc10b788c0bdf5aa67c14a54b06a1979201bcbd99567d14733a352aab9"
+      },
+      {
+        "path": "assets/game/sprites/colonist_14.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "9ff151fb686facc40be582e898377a2c56554296"
+      },
+      {
+        "path": "assets/game/sprites/colonist_15.png",
+        "type": "managed",
+        "sha256": "sha256:827b168c67752a67322339dd278a2e2757a7201b603bf698f4c0fda438d140ad"
+      },
+      {
+        "path": "assets/game/sprites/colonist_15.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "4ec9561454ae622388f754dd0843ad27c23b65d2"
+      },
+      {
+        "path": "assets/game/sprites/cookhouse.png",
+        "type": "managed",
+        "sha256": "sha256:8f41b1097fcc21b049c49a0f63dd76b6833a2fda7ebdfede63e94db545cdd31f"
+      },
+      {
+        "path": "assets/game/sprites/cookhouse.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "1a54de2699f1853ce0e32ceb2c9e3bb13103d5d9"
+      },
+      {
+        "path": "assets/game/sprites/crow.png",
+        "type": "managed",
+        "sha256": "sha256:6a7fa407a5e967c2e0df5f680a5d82873b58b66947f8158ac09e21fb05de49b8"
+      },
+      {
+        "path": "assets/game/sprites/crow.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "524bb11fb5bee569a317e82f8450c8acdb927771"
+      },
+      {
+        "path": "assets/game/sprites/dead_shrub.png",
+        "type": "managed",
+        "sha256": "sha256:129949da811815dbca9d321087c650454bb4dae4695728a9cbffa4be8de12a77"
+      },
+      {
+        "path": "assets/game/sprites/dead_shrub.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "ee42f293d1dcd1376fd51939426d55a91796edbe"
+      },
+      {
+        "path": "assets/game/sprites/deer_doe.png",
+        "type": "managed",
+        "sha256": "sha256:635f3aed5a075b9552f7e0fe76730766fc25befcafecb23760ec622956744a25"
+      },
+      {
+        "path": "assets/game/sprites/deer_doe.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "0db01d27bc0b0709cb9b47ef0311056dae809365"
+      },
+      {
+        "path": "assets/game/sprites/deer_stag.png",
+        "type": "managed",
+        "sha256": "sha256:62523989cd397af29e7226a9752148d604313eb6f1960c274f4ce778855b1fb7"
+      },
+      {
+        "path": "assets/game/sprites/deer_stag.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "c0ec2ac042513f0b1e262ab510200563216a395c"
+      },
+      {
+        "path": "assets/game/sprites/farm_plot.png",
+        "type": "managed",
+        "sha256": "sha256:cbe8b0a3f1d2b89b7f9bdd4a443278cad8d6c8df78a8f033ddf27558d2c28fbf"
+      },
+      {
+        "path": "assets/game/sprites/farm_plot.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "0f7bf3cd3a350e1429fcd9e078b78f7b6baa35ab"
+      },
+      {
+        "path": "assets/game/sprites/fish.png",
+        "type": "managed",
+        "sha256": "sha256:c7bb46c141aebe579498f1c2b7966519b8306afd2a56b827fa44e7322ecaf629"
+      },
+      {
+        "path": "assets/game/sprites/fish.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "dd46745feefd755d95e3903e3383e41a913bb77d"
+      },
+      {
+        "path": "assets/game/sprites/food_shed.png",
+        "type": "managed",
+        "sha256": "sha256:3223b84a28b5190a0f96f113e66930149901facfb616a34097410e8ed9ea06b4"
+      },
+      {
+        "path": "assets/game/sprites/food_shed.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "f60771661022a6bbac263f677b1679b2d5ac1eb2"
+      },
+      {
+        "path": "assets/game/sprites/forge.png",
+        "type": "managed",
+        "sha256": "sha256:54f77fffca10202ce8e3b7b04bc1cc453c38693edac57abe49d1fe809d82b2bd"
+      },
+      {
+        "path": "assets/game/sprites/forge.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "65ee2e013f5b23b2942f7ea48142c6fa2f7c1c6f"
+      },
+      {
+        "path": "assets/game/sprites/fox.png",
+        "type": "managed",
+        "sha256": "sha256:1917619f7cf0d930e44913937d8047d33576eff1e7fad8a35e41485a089d2e14"
+      },
+      {
+        "path": "assets/game/sprites/fox.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "df1c23ba03d9a713d1a61bc2636b379b9b39fbff"
+      },
+      {
+        "path": "assets/game/sprites/gate.png",
+        "type": "managed",
+        "sha256": "sha256:7810c398e9c34209a1356d45085bc91968560e436a03d6dfff98aeb2107f4933"
+      },
+      {
+        "path": "assets/game/sprites/gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "99d2c9c2c7d9f199b484f428e48c90da20469708"
+      },
+      {
+        "path": "assets/game/sprites/herbs.png",
+        "type": "managed",
+        "sha256": "sha256:275f3aacdc1fbc9c28faa4162e7b682290fffb19a807f62187783f11ce1f0c06"
+      },
+      {
+        "path": "assets/game/sprites/herbs.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "c51bba10bb6d339bb531995eb4ddffc502972a20"
+      },
+      {
+        "path": "assets/game/sprites/iron_vein.png",
+        "type": "managed",
+        "sha256": "sha256:f3696d69a2a3b2324f3f516d91b2ddef7449d20ed8e361b54070941876bbc347"
+      },
+      {
+        "path": "assets/game/sprites/iron_vein.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a777f9aac09c5ff7de01d45555e3d5b9f7018c87"
+      },
+      {
+        "path": "assets/game/sprites/longhouse.png",
+        "type": "managed",
+        "sha256": "sha256:5a006f7d58f687bc40bf0605deed3d21ad3e79d36effa4464271b8833f4cb66a"
+      },
+      {
+        "path": "assets/game/sprites/longhouse.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "703538e162e415d539d41171d4fee3c8b28a3ae5"
+      },
+      {
+        "path": "assets/game/sprites/lumber_camp.png",
+        "type": "managed",
+        "sha256": "sha256:a52bb3b176b2fb8aed536fd12f96642c999a65c37e76de1d60571afff00978fe"
+      },
+      {
+        "path": "assets/game/sprites/lumber_camp.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "1bd14c2691b06d4ab6183161d551e157b103ccd4"
+      },
+      {
+        "path": "assets/game/sprites/meal.png",
+        "type": "managed",
+        "sha256": "sha256:162e174802fe947a7e691ce9dfdad55d3c7f05ebc32adb0b3c8d3b5a47c91311"
+      },
+      {
+        "path": "assets/game/sprites/meal.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "2067c630c5e0f7294be11d234bc9bc668855acfa"
+      },
+      {
+        "path": "assets/game/sprites/meat.png",
+        "type": "managed",
+        "sha256": "sha256:697b4ba8bcc78d7999e2a9206f6e067e718f8111a52ba04765c05d6420eaa6ff"
+      },
+      {
+        "path": "assets/game/sprites/meat.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "bd25ebd9a74599eda35764f0b84038dbe9ba2bf9"
+      },
+      {
+        "path": "assets/game/sprites/medicine.png",
+        "type": "managed",
+        "sha256": "sha256:2d6cedd7618b5dccc036dcd0663804690d5afe328a12529218a6b7d3d396bfd1"
+      },
+      {
+        "path": "assets/game/sprites/medicine.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "4f8bb5fc968f3edccc83292a4ed737950a59149e"
+      },
+      {
+        "path": "assets/game/sprites/mine.png",
+        "type": "managed",
+        "sha256": "sha256:afbddc6a88a16874b577d52be0ef6cb7a5ab6cbb6d73d67e4b3326d3d2249c21"
+      },
+      {
+        "path": "assets/game/sprites/mine.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "2d8ed289a77f0e8bdd4081960a49e7ca3ce14cca"
+      },
+      {
+        "path": "assets/game/sprites/mushrooms.png",
+        "type": "managed",
+        "sha256": "sha256:4d3fee12a3cfd88d0331aa3b1950f5e653570f0010231044734d18dfb104b6b0"
+      },
+      {
+        "path": "assets/game/sprites/mushrooms.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "49b6e19dfe296fc519fa451c0ff4f00400025369"
+      },
+      {
+        "path": "assets/game/sprites/oak.png",
+        "type": "managed",
+        "sha256": "sha256:0052755a6d88577b597e69a0dea8a84fb5a2154959dd42bee9510806c0922714"
+      },
+      {
+        "path": "assets/game/sprites/oak.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "9479bf7f32d02934163828373ad0009bf49d3caf"
+      },
+      {
+        "path": "assets/game/sprites/ore.png",
+        "type": "managed",
+        "sha256": "sha256:4c7cb5a86260563bef58b19a20b722b16b2d62db03254d9bf187bb4be294d932"
+      },
+      {
+        "path": "assets/game/sprites/ore.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "5f2f60cd5b232f2cbffaf07fc448e86c6f7ce233"
+      },
+      {
+        "path": "assets/game/sprites/owl.png",
+        "type": "managed",
+        "sha256": "sha256:3fa1b4aed3517eb8457c4a8fbe9ec77ec439edec618eedd8492e8ba043b08647"
+      },
+      {
+        "path": "assets/game/sprites/owl.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "2a53c6e77a6b022439e4162d131b3c75b3f885ba"
+      },
+      {
+        "path": "assets/game/sprites/pine.png",
+        "type": "managed",
+        "sha256": "sha256:c284090cf619fb9e41a324457ba53eed2976f33b5de784819a33c7336652e040"
+      },
+      {
+        "path": "assets/game/sprites/pine.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "5102c8645900ac426971cfc05c8b360ffac52fdb"
+      },
+      {
+        "path": "assets/game/sprites/pumpkin.png",
+        "type": "managed",
+        "sha256": "sha256:fc1303d994e61ad8855a415e731c5fff6d5645f8a19aeff51d064aca58fd6587"
+      },
+      {
+        "path": "assets/game/sprites/pumpkin.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "4eb16aab154beabb867cda07b47a8640897a9aa1"
+      },
+      {
+        "path": "assets/game/sprites/rabbit.png",
+        "type": "managed",
+        "sha256": "sha256:f515072674760a430c586f7ab80839136a4d4371f033d715e62121a7899a2788"
+      },
+      {
+        "path": "assets/game/sprites/rabbit.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "5a79daafc8f9c40f696f73ecb02f0929f06f3b2f"
+      },
+      {
+        "path": "assets/game/sprites/raccoon.png",
+        "type": "managed",
+        "sha256": "sha256:fc1ae562a73fee42307842bb76cd80e68661ef93e08ff7b7d6eb0c6eb2230022"
+      },
+      {
+        "path": "assets/game/sprites/raccoon.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "996ac29bf9805a9f0631d32994d4a1cb0a90cce4"
+      },
+      {
+        "path": "assets/game/sprites/reeds.png",
+        "type": "managed",
+        "sha256": "sha256:0d458c9b58bd69a37ab55a57148e813246c6140e6737e75750a0930924f7ffd0"
+      },
+      {
+        "path": "assets/game/sprites/reeds.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "5cec26e2b9cb4c3ca8fe330f9df14effc9a9de51"
+      },
+      {
+        "path": "assets/game/sprites/research_desk.png",
+        "type": "managed",
+        "sha256": "sha256:c6a185968095c34fe633b4d072bcbd1d79cc97e16ccc013c32a0f1aa93f15c83"
+      },
+      {
+        "path": "assets/game/sprites/research_desk.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "660723cd1a2ddab03a5eb01260f5e9db89b7526b"
+      },
+      {
+        "path": "assets/game/sprites/seeds.png",
+        "type": "managed",
+        "sha256": "sha256:c7972075e7e31248de7111beaab8e9ebe4dff92e35768f9a57e0315bb78b4427"
+      },
+      {
+        "path": "assets/game/sprites/seeds.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "cd0d1b0d342ee586f81d7d0386dbf0d7db914586"
+      },
+      {
+        "path": "assets/game/sprites/snake.png",
+        "type": "managed",
+        "sha256": "sha256:112ca2112236faa8e9c1c16d430172acc550a528b869615b68ddc7b0a88a2a01"
+      },
+      {
+        "path": "assets/game/sprites/snake.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "fc92ddd5eea2204153ce8cb6def19c5f3a395b3d"
+      },
+      {
+        "path": "assets/game/sprites/soil_plot.png",
+        "type": "managed",
+        "sha256": "sha256:a1b00aa36e5223492d4dfa3887dc648ff08f47b08bf3cca0c13b78fc0e829834"
+      },
+      {
+        "path": "assets/game/sprites/soil_plot.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "c0319c3069cc7cf13e6ae76736873de8332a09bf"
+      },
+      {
+        "path": "assets/game/sprites/stockpile.png",
+        "type": "managed",
+        "sha256": "sha256:9363f7c70d84707fdb8c31565c9553223e5347e17e01b5121f31aee093c9412d"
+      },
+      {
+        "path": "assets/game/sprites/stockpile.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "3107543f405672862e30aac58a09034a9171ba21"
+      },
+      {
+        "path": "assets/game/sprites/stone.png",
+        "type": "managed",
+        "sha256": "sha256:9da52dcf79e2bd84881cba0b2d9dc7cd3e1384604d5cbddd346a16c22a51775c"
+      },
+      {
+        "path": "assets/game/sprites/stone.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "36a31ea2683e4875831ffc523222518def00c3ee"
+      },
+      {
+        "path": "assets/game/sprites/stone_outcrop.png",
+        "type": "managed",
+        "sha256": "sha256:b4f428d9f4707fb3edf3ace583b98c953e4f3d794142c70770a86925152a39b7"
+      },
+      {
+        "path": "assets/game/sprites/stone_outcrop.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "835ba50a0f74566bcb7583ce292d403783097842"
+      },
+      {
+        "path": "assets/game/sprites/stump.png",
+        "type": "managed",
+        "sha256": "sha256:7aa32a7caa7d75929209fd87ab6d925a92fcd368ae24ddd923290a9a4e0c42e6"
+      },
+      {
+        "path": "assets/game/sprites/stump.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "08e8a1c43e0844d5ab6ae6ed707e4c213baa3786"
+      },
+      {
+        "path": "assets/game/sprites/tools.png",
+        "type": "managed",
+        "sha256": "sha256:659e6875a9f6d55f2e0c918c499a8023bca248b1f98645a900a13e50b5b91a81"
+      },
+      {
+        "path": "assets/game/sprites/tools.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "09099f3cedf3f93af48ffc292c80b0b402c1e04c"
+      },
+      {
+        "path": "assets/game/sprites/trout.png",
+        "type": "managed",
+        "sha256": "sha256:10c5a3f72fba7ea72c695684202241c836051de0e38c7411e3f9b20efabd070d"
+      },
+      {
+        "path": "assets/game/sprites/trout.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "b069c756cee9f3ca23cddc419018d249731e63b6"
+      },
+      {
+        "path": "assets/game/sprites/turkey.png",
+        "type": "managed",
+        "sha256": "sha256:193bae7c7508574c48e678df652be8dd9df36812ac03260e02a0b5b1961dd74f"
+      },
+      {
+        "path": "assets/game/sprites/turkey.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a045088960a1aab9f4ab0724e17686f9d60b1407"
+      },
+      {
+        "path": "assets/game/sprites/wall.png",
+        "type": "managed",
+        "sha256": "sha256:b729b79476c6a6ef616966b4cce9d56f534016aa513597f6309db77a4533ad59"
+      },
+      {
+        "path": "assets/game/sprites/wall.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "018682055d133ec9d06c04320b9b6db843c6b079"
+      },
+      {
+        "path": "assets/game/sprites/watchtower.png",
+        "type": "managed",
+        "sha256": "sha256:3706104a965afb2a5737ea5a1b0b689e5df819c81d5b5985c45086364386b6a3"
+      },
+      {
+        "path": "assets/game/sprites/watchtower.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "b4d104f4dddde972848de897268d2c234cf1131b"
+      },
+      {
+        "path": "assets/game/sprites/well.png",
+        "type": "managed",
+        "sha256": "sha256:88014c7730c90c1d10c958a5cc9aca476eec8d92f4350f2abed4b2428eefac5a"
+      },
+      {
+        "path": "assets/game/sprites/well.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "4d4bac23a247405b44b76212f1580e461704c035"
+      },
+      {
+        "path": "assets/game/sprites/wheat.png",
+        "type": "managed",
+        "sha256": "sha256:99ba8f19cb9e3b5abfc3ff5f2a7d5b922a027c8b9b5472651cab093628484378"
+      },
+      {
+        "path": "assets/game/sprites/wheat.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "50b47e590cfb12f74286892b3152de5068d9d3a1"
+      },
+      {
+        "path": "assets/game/sprites/wolf_black.png",
+        "type": "managed",
+        "sha256": "sha256:a681d80e9c24cb28ecc10d6117642259e8443cc1872c2d6c1cbaa9b62032ff76"
+      },
+      {
+        "path": "assets/game/sprites/wolf_black.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a1b6895c3f404f0b3068f6ec0fef53bf045a976c"
+      },
+      {
+        "path": "assets/game/sprites/wolf_grey.png",
+        "type": "managed",
+        "sha256": "sha256:4a1dd7ad73c9d27f040dde6efd6197e1a9e883e7fdc07d08343dbe5e1ca33bf7"
+      },
+      {
+        "path": "assets/game/sprites/wolf_grey.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "14eeb201c2b175da15c993dd33cce2da9ff71a20"
+      },
+      {
+        "path": "assets/game/sprites/wood.png",
+        "type": "managed",
+        "sha256": "sha256:e2c18fe3125426463f48a9dfe890144c2de9e690c041d9459a301b601b639871"
+      },
+      {
+        "path": "assets/game/sprites/wood.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "ec72fa7e3195b740d786dc67c012c752894836a2"
+      },
+      {
+        "path": "assets/game/sprites/workshop.png",
+        "type": "managed",
+        "sha256": "sha256:8d07333830873181cf424e9a3e0b3293fee33930641e905b3f3a36dece5f5af2"
+      },
+      {
+        "path": "assets/game/sprites/workshop.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a92eeac1d7f44cf2227ce144d2097ad7646d31d1"
+      },
+      {
+        "path": "assets/template/characters/runner.png",
+        "type": "managed",
+        "sha256": "sha256:c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21"
+      },
+      {
+        "path": "assets/template/characters/runner.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "4e94c3d559a1d31037bd287608ab667acb50946c"
+      },
+      {
+        "path": "assets/template/characters/sentinel.png",
+        "type": "managed",
+        "sha256": "sha256:0d9fb751bca5507ba14f7090573e6605a94753390a9e7c53bf2f590f0a24918d"
+      },
+      {
+        "path": "assets/template/characters/sentinel.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "9a08ff25a9f1e23c69e0f29072af114af3f3be78"
+      },
+      {
+        "path": "assets/template/environment/backdrop.png",
+        "type": "managed",
+        "sha256": "sha256:ec4ab7867e60fb483dd438459f587b478aac4c1e71ec4fe509ce74a18de34216"
+      },
+      {
+        "path": "assets/template/environment/backdrop.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "9f2efe5e36aed09dcb69b6b56e82f66663560ce4"
+      },
+      {
+        "path": "assets/template/environment/foreground.png",
+        "type": "managed",
+        "sha256": "sha256:4b6916024c69961fbfa7cdc929c68f547fea4561e61ebdb3405b3aba0efbd94d"
+      },
+      {
+        "path": "assets/template/environment/foreground.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "3a302f8ab79e7709bafbc263bdbf91fde6312d34"
+      },
+      {
+        "path": "assets/template/fonts/Figtree-OFL.txt",
+        "type": "file",
+        "mode": "100644",
+        "object": "80b12bb3d0c0942676657ef6d125daf4a1e1346d"
+      },
+      {
+        "path": "assets/template/fonts/Figtree-VF.subset.woff2",
+        "type": "managed",
+        "sha256": "sha256:b3976c5969c8b1afd81dc3e314b61d8ffe3f3f58cf40906443105d330e6e0bdf"
+      },
+      {
+        "path": "assets/template/fonts/Figtree-VF.subset.woff2.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "fcdf1ce38d13e1586e88154b40418e5a1dfbfdd1"
+      },
+      {
+        "path": "assets/template/fonts/NotoSansCJKsc-Generic2D.corpus.txt",
+        "type": "file",
+        "mode": "100644",
+        "object": "7014d88b1eaa7f4f89993bac7537b469ad8837f3"
+      },
+      {
+        "path": "assets/template/fonts/NotoSansSC-OFL.txt",
+        "type": "file",
+        "mode": "100644",
+        "object": "1c9f43281b8f216c5461fe9ac729afbade7724e4"
+      },
+      {
+        "path": "assets/template/fonts/NotoSansSC-VF.subset.woff2",
+        "type": "managed",
+        "sha256": "sha256:38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412"
+      },
+      {
+        "path": "assets/template/fonts/NotoSansSC-VF.subset.woff2.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "163df35923e9a2f3b056ccc733ce8eb7d2f3925d"
+      },
+      {
+        "path": "assets/template/fonts/SOURCES.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "c02b0df39526bc17f46dbb5a0d76086239221441"
+      },
+      {
+        "path": "assets/template/fonts/display/Sora-OFL.txt",
+        "type": "file",
+        "mode": "100644",
+        "object": "f1d9d6af7ba46af6c2da765fa123d93239c913f5"
+      },
+      {
+        "path": "assets/template/fonts/display/Sora-VF.subset.woff2",
+        "type": "managed",
+        "sha256": "sha256:438fbf4582548e76b266a738f2c11bcbd5137978f2d2e2f3aaabd49df69186f2"
+      },
+      {
+        "path": "assets/template/fonts/display/Sora-VF.subset.woff2.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "088007e44bf3bf2f418e10f7a49c5205b0f9eeb1"
+      },
+      {
+        "path": "assets/template/fonts/display/generic_eyebrow.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "3f69fc3c0d3d8443a77eebafbadddba876b578eb"
+      },
+      {
+        "path": "assets/template/fonts/display/generic_heading.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "132471a747225dc8167b54c4f1bfbde1b39cb3d4"
+      },
+      {
+        "path": "assets/template/fonts/display/generic_menu.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "06e12922faed8af62f9e176035574bb1239b6735"
+      },
+      {
+        "path": "assets/template/fonts/display/generic_title.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "d0d5a003756a7bc65ea3427b0ecdaa3fe8f6f853"
+      },
+      {
+        "path": "assets/template/fonts/noto_sans_sc_bold.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "db38c06205f00ba3243a9b81e862126737f8488f"
+      },
+      {
+        "path": "assets/template/fonts/noto_sans_sc_medium.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "b65d0536025f84a1d7fe41d3f80b4addb362bad0"
+      },
+      {
+        "path": "assets/template/fonts/noto_sans_sc_regular.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "676729b9ea8a1e86d29e1132bc997560adf1c1c6"
+      },
+      {
+        "path": "assets/template/fonts/runtime-cjk.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "2abefff57b45b0b85445c2f3c4887c036a5fd2e6"
+      },
+      {
+        "path": "assets/template/fonts/ui_bold.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "90ab312d6939988a69481d206c7f70e3464cf838"
+      },
+      {
+        "path": "assets/template/fonts/ui_medium.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "a8fc18f64f3c8f9b55889d7aa30907ea29019d87"
+      },
+      {
+        "path": "assets/template/fonts/ui_regular.tres",
+        "type": "file",
+        "mode": "100644",
+        "object": "d4032bf6f6e61e242110b31caf8e758e4f9b71bf"
+      },
+      {
+        "path": "assets/template/powerups/energy.png",
+        "type": "managed",
+        "sha256": "sha256:ffd7906f240f928e785d7c19a9e7a7b5dfab0d7483be5205dda3e4ba17ebe06a"
+      },
+      {
+        "path": "assets/template/powerups/energy.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "cae88b73206cff5315b8e7a74493bfbf5ed97a13"
+      },
+      {
+        "path": "assets/template/powerups/magnet.png",
+        "type": "managed",
+        "sha256": "sha256:6e7354aa6510a462717218b09b9d784bb161b87878bff62ef4f2a9d03c053de7"
+      },
+      {
+        "path": "assets/template/powerups/magnet.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "c4ebef638a89658d6a4f357661c8e5b5e6b33699"
+      },
+      {
+        "path": "assets/template/powerups/overdrive.png",
+        "type": "managed",
+        "sha256": "sha256:6a48a85886c0551c1af0df576b0225f0ec3ae86b326fd84fc614083fbfe2908b"
+      },
+      {
+        "path": "assets/template/powerups/overdrive.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "22aba1b7606c235565a98e533181b8455a8e6c14"
+      },
+      {
+        "path": "assets/template/powerups/shield.png",
+        "type": "managed",
+        "sha256": "sha256:8cebf0cf730ca35c8c8697192ef78121c926442328a0725e0bd3e31701d64f13"
+      },
+      {
+        "path": "assets/template/powerups/shield.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "35fbc1a94451624732133a4b11279ce3b187165b"
+      },
+      {
+        "path": "assets/template/powerups/slow_field.png",
+        "type": "managed",
+        "sha256": "sha256:96874c000866b2e7503b40da73888afb918ae36e462f51488415157da52a8637"
+      },
+      {
+        "path": "assets/template/powerups/slow_field.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "77c586c082f8688361603c095e0b3db15758b68c"
+      },
+      {
+        "path": "assets/template/provenance/AUDIO.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "d3426b27dde36e92b6667fefb49eb34eed1f39d1"
+      },
+      {
+        "path": "assets/template/provenance/IMAGEGEN.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "6291eaf4d894d5eca8bb130f70c490fef3381d2d"
+      },
+      {
+        "path": "assets/template/ui/loading-background.png",
+        "type": "managed",
+        "sha256": "sha256:16dde3061f4e60802f8f0d1a6b875e72b6add05192237b03fef1fd313968a13a"
+      },
+      {
+        "path": "assets/template/ui/loading-background.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "086bdac079394a25e613819ea0b98b25eb5c86aa"
+      },
+      {
+        "path": "assets/template/ui/pause_glass.png",
+        "type": "managed",
+        "sha256": "sha256:c88a4725838df85e72c7270865848f275b62c525c5679a2a8b7ecefb1af82d4b"
+      },
+      {
+        "path": "assets/template/ui/pause_glass.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "e88931788d118e015768f93a3cedf1f5af34c662"
+      },
+      {
+        "path": "assets/template/ui/title_glass.png",
+        "type": "managed",
+        "sha256": "sha256:8860db07768f093d4effea10b51431f76a1552d4bc7fd4e57757f189c51f0429"
+      },
+      {
+        "path": "assets/template/ui/title_glass.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "674fd8f2d827f90b76f74f7b881e31dbf12a36ad"
+      },
+      {
+        "path": "autoload/audio_director.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "22b8a7675e98c351636b43c8b240e4fab97ed0c0"
+      },
+      {
+        "path": "autoload/audio_director.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "daccd7d2a5cc119de47801236a27dc762ebde740"
+      },
+      {
+        "path": "autoload/cloud_services.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "7a8fb51c309e5b81ffaa7dbbffea6de7c2c2fd98"
+      },
+      {
+        "path": "autoload/cloud_services.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "9613eb6fdacd2d3b419ca4d6d5ce403c5bcedc23"
+      },
+      {
+        "path": "autoload/hf_assets.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "0d4d481a7b9d8d677486ba918cc7b7accc7cc826"
+      },
+      {
+        "path": "autoload/hf_assets.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "1664d53e94278ba6612387e0e9b0e32ba8e1de73"
+      },
+      {
+        "path": "autoload/i18n.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "3d681a34e4b3771b2d3a6e01cfb7ef8d72c1e101"
+      },
+      {
+        "path": "autoload/i18n.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "1a984257c54215a45189d20c6bae22fdd6525953"
+      },
+      {
+        "path": "autoload/manus_font_theme.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "8bfdcd66babd1257b0aa97f689ec0ff81fc15fb2"
+      },
+      {
+        "path": "autoload/manus_font_theme.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "fcd8dc330c8cd855256097c963893e1b6b2c1f42"
+      },
+      {
+        "path": "autoload/save_store.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "2b7610fc6f4d1aa99cafb15697feba18d814bc8a"
+      },
+      {
+        "path": "autoload/save_store.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "39f469779e8ce0f89f72b7cfd62922d4fd459437"
+      },
+      {
+        "path": "autoload/tuning_store.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "fd84c7cf584345aed04ee8f98148962cc9640cdb"
+      },
+      {
+        "path": "autoload/tuning_store.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "4c8a1ce57d226726c7e179ceca63aa66b18e0aa3"
+      },
+      {
+        "path": "build/.gdignore",
+        "type": "file",
+        "mode": "100644",
+        "object": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+      },
+      {
+        "path": "config/tuning.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "4e0a7e059ce703cb366df768031fe75db737d0a4"
+      },
+      {
+        "path": "docs/game-multiplayer.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "cd452860131d198bfd3898420e9f058d2f0f8a18"
+      },
+      {
+        "path": "docs/loading-art-provenance.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "fbefaf99eff2077bbc3e26f8840feda1f7d10349"
+      },
+      {
+        "path": "docs/minimalist-redesign.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "d97d909613ad4b76abc31465ef26bccd00ef4389"
+      },
+      {
+        "path": "export_presets.cfg",
+        "type": "file",
+        "mode": "100644",
+        "object": "9ee83d3950ad7b44534a7d3d12eaed8307ecd6e9"
+      },
+      {
+        "path": "game-backend-contract.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "d42ea67e63e69c2e13273cffaac95aa42c57a750"
+      },
+      {
+        "path": "game-verification.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "bd0de63c14e99f75c011ecd8e5754c086de74aa8"
+      },
+      {
+        "path": "localization/en.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "780af8c1d69c975e3862fd1068eb6adc81014381"
+      },
+      {
+        "path": "localization/zh-CN.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "e58907b75d6ec96fef6ff2bd46cc4b1576d65e0c"
+      },
+      {
+        "path": "package.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "7fdb8d6e36ba84d4057355994f73582b2ca91840"
+      },
+      {
+        "path": "plan.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "282caabbc7195c64b6e7d70f912bd41cf67b2c21"
+      },
+      {
+        "path": "project.before-auth.godot",
+        "type": "file",
+        "mode": "100644",
+        "object": "577d435c65431368362f651e66700ca03d4bffdf"
+      },
+      {
+        "path": "project.godot",
+        "type": "file",
+        "mode": "100644",
+        "object": "fc523405e935ea1d8486ae8bd4a8b630a1fbbaae"
+      },
+      {
+        "path": "scenes/main.tscn",
+        "type": "file",
+        "mode": "100644",
+        "object": "b38d830360e230443976bda00eada736b88769c2"
+      },
+      {
+        "path": "scripts/effects/effects_director.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "979fac9b6d3fb060cad40c069e35486782023932"
+      },
+      {
+        "path": "scripts/effects/effects_director.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "1c87e4ce5f41eb1fa2ff166126357d4c0e7070ef"
+      },
+      {
+        "path": "scripts/entities/runner.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "c4afe75f6922203b9e2133e6e8232ba7f56f7815"
+      },
+      {
+        "path": "scripts/entities/runner.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "44a5bf6df760cfb52a855fb9ba5e419d86a4c207"
+      },
+      {
+        "path": "scripts/entities/sentinel.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "1b0d405275759e35a706b9385cd5b562c84d877e"
+      },
+      {
+        "path": "scripts/entities/sentinel.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "fc3251bb57720255b19c4c20385a3c183f653ca8"
+      },
+      {
+        "path": "scripts/game/colony_sim.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "5ef76dc9674ea827f93dfa82b2493e28a35c62d2"
+      },
+      {
+        "path": "scripts/game/colony_sim.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "8a43ced97a8de6b65fdff3ed47e92b1785a5797f"
+      },
+      {
+        "path": "scripts/game/defs.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "ca60347be603db1768d827312e237f7a0584bbfa"
+      },
+      {
+        "path": "scripts/game/defs.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "69ac2b760cc766295c1a7cb458624dee6b042b5a"
+      },
+      {
+        "path": "scripts/game/maze_world.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "5963b8af714649175efc9c4c3d57a0124857bb41"
+      },
+      {
+        "path": "scripts/game/maze_world.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "30d2edb43391ff4a6a6a46938d4f544043016de2"
+      },
+      {
+        "path": "scripts/game/stage_catalog.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "e5e2f4d96d8f63825cf35146aedc2c698096d2b7"
+      },
+      {
+        "path": "scripts/game/stage_catalog.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "3947c71def4a25f0acde9517fdaa9c33c2ebf2ba"
+      },
+      {
+        "path": "scripts/main.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "45fe31a7ff57ff95eab5fbe81d825b9fec9d919a"
+      },
+      {
+        "path": "scripts/main.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "61efe980059fde8c40bbb653bfd26d98ee4ee59b"
+      },
+      {
+        "path": "scripts/manus/browser_bgm_backend.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "5b11ca0a310976b075d441b47bb9f5bbf970a6af"
+      },
+      {
+        "path": "scripts/manus/browser_bgm_backend.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "ebac9ccea44c3484d1f66dff2b9ccda0e2528c40"
+      },
+      {
+        "path": "scripts/manus/browser_bgm_player.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "4d23223998288ffdc9391dde1206b13dfe89b765"
+      },
+      {
+        "path": "scripts/manus/browser_bgm_player.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "41fd5a213c7c697679c04e8991205099050c8f94"
+      },
+      {
+        "path": "scripts/manus/game_fonts.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "524c08cd370a3282774603760c2769bef4d77755"
+      },
+      {
+        "path": "scripts/manus/game_fonts.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "fa918c0b40db4d28ac09e14bf56ae6b6ec71e286"
+      },
+      {
+        "path": "scripts/manus/open_source_licenses.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "f96b57b13634687de25c403cb5e9cf7fc6c7abc4"
+      },
+      {
+        "path": "scripts/manus/open_source_licenses.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "ef59d34eca88b308b481ca8332dda80c2929e4cf"
+      },
+      {
+        "path": "scripts/manus/preview/tuning_adapter.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "f30406ac3363211a3d2eb20dc7fb07bcff3539a3"
+      },
+      {
+        "path": "scripts/manus/preview/tuning_adapter.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "d5ec6dcb94640811bd659d3f33229b52cad050a1"
+      },
+      {
+        "path": "scripts/manus/preview/tuning_transport.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "845eedb5cfe41711f0f4b14f093159b45c825ecc"
+      },
+      {
+        "path": "scripts/manus/preview/tuning_transport.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "0311e9b44d931f8e683c65150b165ef088571bb5"
+      },
+      {
+        "path": "scripts/manus/procedural_sfx.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "5bac89f3f21e5b2fe574b0896ad0f90f1792247a"
+      },
+      {
+        "path": "scripts/manus/procedural_sfx.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "143bea7aea17da3af3ac431a43cd46516006287f"
+      },
+      {
+        "path": "scripts/manus/runtime-command.cjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "39fd46daecc470eaf3731632a1969e0f382144ad"
+      },
+      {
+        "path": "scripts/manus_auth.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "038abda2897931c8f365058beaa1464ba6476f1f"
+      },
+      {
+        "path": "scripts/manus_auth.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "6be4f8e4b0c503fa13e08bfaffb067c98964b669"
+      },
+      {
+        "path": "scripts/score/run_score_service.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "016ddbd0ea65e4d1694462cc7656495791b543c2"
+      },
+      {
+        "path": "scripts/score/run_score_service.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "d4226f135b061b87e39a2e3d16f035c8a3defdb8"
+      },
+      {
+        "path": "scripts/ui/arena_frame.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "e90fd24d099c83c04e267b1842c9d312f29c7f40"
+      },
+      {
+        "path": "scripts/ui/arena_frame.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "c243b78b8bb600d94d01e26321a71946a2518ec1"
+      },
+      {
+        "path": "scripts/ui/colony_hud.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "e2eee8eb0993ae5e21573a6e47a200f67068d80e"
+      },
+      {
+        "path": "scripts/ui/colony_hud.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "962f5679940514752f91ba84cff30fcc514d7e11"
+      },
+      {
+        "path": "scripts/ui/menu_list.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "fe829e7c9bfa93581d2952f0e8844432bf6f784f"
+      },
+      {
+        "path": "scripts/ui/menu_list.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "395526aa5d93b770147d54ef75bac1fd834419d0"
+      },
+      {
+        "path": "scripts/ui/screen_factory.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "8630f6b47ca6e88b5be52a1396a9e92efbcef4bd"
+      },
+      {
+        "path": "scripts/ui/screen_factory.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "27a7e8b92cd7bb7e2ca0f90b9430ff798a9cb8c5"
+      },
+      {
+        "path": "scripts/ui/title_art.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "013f4285927d89810762028763c99e3581e370ba"
+      },
+      {
+        "path": "scripts/ui/title_art.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "9136847041433d454d6b1107425e4f5f7d1cf37a"
+      },
+      {
+        "path": "scripts/ui/tutorial_callout.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "21ba58433205b6bb60869c0aa10909de5e742fe0"
+      },
+      {
+        "path": "scripts/ui/tutorial_callout.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "d1c0191a2950f75818df9e3b42844bf91e7c4f5d"
+      },
+      {
+        "path": "scripts/ui/ui_kit.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "248ffa4f70524738d590273269bd77c98f641c49"
+      },
+      {
+        "path": "scripts/ui/ui_kit.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "54cd73bdd31d47cbe2898c1b23d672c39964cd47"
+      },
+      {
+        "path": "scripts/ui/weather_overlay.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "813215f9f6e66b873830dde1275cc4db3bb936b2"
+      },
+      {
+        "path": "scripts/ui/weather_overlay.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "9cd3b4f56d350927bc3f2d044aea2bc5a07039f1"
+      },
+      {
+        "path": "scripts/world/world_renderer.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "fde9aa7f263b6e301b5fc58ae7e1834066d85c4b"
+      },
+      {
+        "path": "scripts/world/world_renderer.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "add443fc299ea2bcd3171798afcba88adfed1059"
+      },
+      {
+        "path": "server/0000_initial_users.sql",
+        "type": "file",
+        "mode": "100644",
+        "object": "731bf84b2da06adc3cd4a341c111c88bdd1b9f9f"
+      },
+      {
+        "path": "server/Dockerfile",
+        "type": "file",
+        "mode": "100644",
+        "object": "e1aa988fc40e83c4c55add512904e86b9584cd09"
+      },
+      {
+        "path": "server/app.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "d4a73d904b40015ec4ce56481fe7bd3667831edd"
+      },
+      {
+        "path": "server/index.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "bc5397166967fe55824642f52b22c29ca481716c"
+      },
+      {
+        "path": "server/leaderboard.config.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "3fc677b834633623cefafbf0e2ca6392ee6244bc"
+      },
+      {
+        "path": "server/leaderboard.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "be0aa57042777b293d0333fa2188e6ddc25522fe"
+      },
+      {
+        "path": "server/leaderboard/config.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "01bb2e666a924380dcbca6c3527a45c74f19def6"
+      },
+      {
+        "path": "server/leaderboard/deployment-contract.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "457a4eaf85f83d2314d291d95ac72c95ac6daad5"
+      },
+      {
+        "path": "server/leaderboard/migrate.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "554063257c60573f63cda7c571545e70165e236d"
+      },
+      {
+        "path": "server/leaderboard/migrations/000_initial_users.sql",
+        "type": "file",
+        "mode": "100644",
+        "object": "731bf84b2da06adc3cd4a341c111c88bdd1b9f9f"
+      },
+      {
+        "path": "server/leaderboard/migrations/001_leaderboards.sql",
+        "type": "file",
+        "mode": "100644",
+        "object": "6157ed089f3b76f7c54b09d702132465c2165033"
+      },
+      {
+        "path": "server/leaderboard/migrations/002_deployment_contract.sql",
+        "type": "file",
+        "mode": "100644",
+        "object": "265da42f3dddbe295a12286d61f737e889dfc1a3"
+      },
+      {
+        "path": "server/leaderboard/migrations/003_accounts.sql",
+        "type": "file",
+        "mode": "100644",
+        "object": "8e222c14636574a0ffd84d3111d674491035c2bc"
+      },
+      {
+        "path": "server/leaderboard/migrations/004_cloud_saves_and_boards.sql",
+        "type": "file",
+        "mode": "100644",
+        "object": "5adcdd4e7efae82d5d0136b157cb4f57281aa2e2"
+      },
+      {
+        "path": "server/leaderboard/request-database.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "fc6149ae06ac39a1dcfaa8939ec8f9860f95fbeb"
+      },
+      {
+        "path": "server/leaderboard/rest.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "1dcf5944b5ede985b52d082a0106e1c136ca4dbd"
+      },
+      {
+        "path": "server/leaderboard/router.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "7f81046d61332f88cdf6827e229b9b6ed8993dd9"
+      },
+      {
+        "path": "server/leaderboard/runtime.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "f10e5cf4bce11d5577b02cbd7a24107d09d66a46"
+      },
+      {
+        "path": "server/leaderboard/service.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "243f88cf0b11fe27191433965d3f517e9ce85f35"
+      },
+      {
+        "path": "server/owner-alerts.config.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "160394dc8c68f1609b83f135755b79d4caa61944"
+      },
+      {
+        "path": "server/owner-notifier.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "2e4848e9aed079890ea2700df9b9f5dee8b24d1a"
+      },
+      {
+        "path": "server/package-lock.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "b9f464c864f110fb647259557000eb35a70d8296"
+      },
+      {
+        "path": "server/package.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "2ddf7693c878ea9816c9058cdf8672ddba938f4b"
+      },
+      {
+        "path": "server/routers.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "f2bac54b059a3371b32c00356751b80500895298"
+      },
+      {
+        "path": "server/webdev-adapter.mjs",
+        "type": "file",
+        "mode": "100644",
+        "object": "e3816b61bab00d84e73215dcfc032372d8ad0d27"
+      },
+      {
+        "path": "shaders/arcade_filter.gdshader",
+        "type": "file",
+        "mode": "100644",
+        "object": "e4760cab6cac6d31a763e2c3fc5f672245ad8ee9"
+      },
+      {
+        "path": "shaders/arcade_filter.gdshader.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "2a1483a77c5d14ff9bbef71ee3e977fad6c98a99"
+      },
+      {
+        "path": "shaders/holo_panel.gdshader",
+        "type": "file",
+        "mode": "100644",
+        "object": "f7cdd32b4bdef94767ea2b444a14c4b9f82ea897"
+      },
+      {
+        "path": "shaders/holo_panel.gdshader.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "4089b65c4e64143bf43a3d2bf490613fd5c007ae"
+      },
+      {
+        "path": "shaders/logo_chrome.gdshader",
+        "type": "file",
+        "mode": "100644",
+        "object": "5f644954f04124048fc65cd74f709927d1306f41"
+      },
+      {
+        "path": "shaders/logo_chrome.gdshader.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "3043bffbca66bdc0aaa2b52c1204b9efde9ff963"
+      },
+      {
+        "path": "shaders/modal_backdrop.gdshader",
+        "type": "file",
+        "mode": "100644",
+        "object": "f331ce5901a77174a809e2b0830ac7b364b5eb14"
+      },
+      {
+        "path": "shaders/modal_backdrop.gdshader.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "a2b115e2082012c1cbc0118216f6c1e696cf753f"
+      },
+      {
+        "path": "template-provenance.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "2d400af975b9ac2ecb8f2f9fd99fd860926cd545"
+      },
+      {
+        "path": "template.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "4fad95346f5c75e70357defb5a1522a8e41f5806"
+      },
+      {
+        "path": "test/hearthfall_smoke.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "eac116acd01ad554043676d72bf54b40a5512c59"
+      },
+      {
+        "path": "test/hearthfall_smoke.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "6520d7de5af0667ae379c28d76f4d0ca3ba03d21"
+      },
+      {
+        "path": "test/hearthfall_smoke.tscn",
+        "type": "file",
+        "mode": "100644",
+        "object": "2c4bda15b87d558f96517910ba5a0d0f60b738cb"
+      },
+      {
+        "path": "test/test_suite.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "7438388b8445b0ffa7607ae7d18c7eee4020c271"
+      },
+      {
+        "path": "test/test_suite.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "4a6c82a3246f38fa6cc8b6d0af94710baa8dec1b"
+      },
+      {
+        "path": "test/test_suite.tscn",
+        "type": "file",
+        "mode": "100644",
+        "object": "69af80d2709e6628bd401ad377be5a4f54b067b5"
+      },
+      {
+        "path": "test/tuning_bridge_contract.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "99eb8514be3fbc88129c701a6ba0e32d76c85d73"
+      },
+      {
+        "path": "test/tuning_bridge_contract.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "02afe3a5fec9c04579377e66f900f5fff1da32e6"
+      },
+      {
+        "path": "tests/cabin_test.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "157662ba5e8cf5b9822e45139fd1445f6c39a7b3"
+      },
+      {
+        "path": "tests/cabin_test.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "57db10183ac81df8fecdf29443080876046ee784"
+      },
+      {
+        "path": "tests/colonist_badges.png",
+        "type": "file",
+        "mode": "100644",
+        "object": "06b880a44ea494b367e81043395b212387ba05b3"
+      },
+      {
+        "path": "tests/colonist_badges.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "608aff8bd6354cdd66d351647a7cf2d978a23a79"
+      },
+      {
+        "path": "tests/debug_hauling.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "da17573222b469b58a97e8625ed7ebb701085300"
+      },
+      {
+        "path": "tests/debug_hauling.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "2ae1bdf1d312cc6db45a61a3c0ca4e9354c1a591"
+      },
+      {
+        "path": "tests/hud_resource_test.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "38fb03bf006132b03056ea68ed3a31c2428bb283"
+      },
+      {
+        "path": "tests/hud_resource_test.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "b0a4dd2e4e527c9bcb9c666cca5d91ecff1a49dc"
+      },
+      {
+        "path": "tests/long_sim.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "787502fce71f35ea25465b8ca0fe62d765951038"
+      },
+      {
+        "path": "tests/long_sim.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "07998e40719f7dcc4a62e81594b2bc30ab08bf5c"
+      },
+      {
+        "path": "tests/objectives_crop.png",
+        "type": "file",
+        "mode": "100644",
+        "object": "057001c2763c5efc9e1fd001900e8f644e159c3a"
+      },
+      {
+        "path": "tests/objectives_crop.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "e0598969ba83945e5a11e4ab826092c3a96df45b"
+      },
+      {
+        "path": "tests/smoke_test.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "45cf20d580e11438f30c6d9e408399b56506c1ab"
+      },
+      {
+        "path": "tests/smoke_test.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "e28ef5c6bd3aaf78dbb823d8659a9b8dbcac4609"
+      },
+      {
+        "path": "tests/speed_crop.png",
+        "type": "file",
+        "mode": "100644",
+        "object": "cca5faa34d63fe33fadf76b1546c07ded695fad8"
+      },
+      {
+        "path": "tests/speed_crop.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a027bb47d8ae313e3e255b63c77594f1223a29d6"
+      },
+      {
+        "path": "tests/topbar_crop.png",
+        "type": "file",
+        "mode": "100644",
+        "object": "cdc7d917f3e5195f0844ebae3d487aa05602bc66"
+      },
+      {
+        "path": "tests/topbar_crop.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "641a5a5dc0cb684dbca5cfa3037c42110c2f5c77"
+      },
+      {
+        "path": "tools/__pycache__/slice_asset_sheets.cpython-312.pyc",
+        "type": "file",
+        "mode": "100644",
+        "object": "4fe3ead139fa410c72a8b4b052a47ccbaaf6c206"
+      },
+      {
+        "path": "tools/build_cjk_font.py",
+        "type": "file",
+        "mode": "100644",
+        "object": "dd2a5a944c7de770b7efde8bc2e0010068dc9eda"
+      },
+      {
+        "path": "tools/build_cjk_font_subset.py",
+        "type": "file",
+        "mode": "100755",
+        "object": "1a224c7194816d30087ffe5af030cef96f2e61f7"
+      },
+      {
+        "path": "tools/build_loading_screen.py",
+        "type": "file",
+        "mode": "100644",
+        "object": "38c49b168ffb0e956033c4ccd3516f69417ffc5b"
+      },
+      {
+        "path": "tools/capture_native.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "b50c5c1af077191c5390b855155345ef3182a8a6"
+      },
+      {
+        "path": "tools/capture_native.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "68d74a30443d1ea9763ac0f3eab4c9b41cd0fc24"
+      },
+      {
+        "path": "tools/game-runtime-font-codepoints.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "d58015f2c8148087b62a53d7893da2591ffa5cac"
+      },
+      {
+        "path": "tools/game-runtime-font.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "b592ef10ae9fc7cfc2e5a8b3836dbb1f580515ce"
+      },
+      {
+        "path": "tools/game-runtime-font.requirements.txt",
+        "type": "file",
+        "mode": "100644",
+        "object": "0810aab0e2ee9e8c03cc20d7e738a2b180ffa1ca"
+      },
+      {
+        "path": "tools/install_cjk_font.py",
+        "type": "file",
+        "mode": "100644",
+        "object": "28de478c5dd3ba4e09d7f3241957772cf4c3f1a3"
+      },
+      {
+        "path": "tools/slice_asset_sheets.py",
+        "type": "file",
+        "mode": "100644",
+        "object": "0ff5f99582b18397087bcadaf5a49f684e2b70a9"
+      },
+      {
+        "path": "tools/verify.sh",
+        "type": "file",
+        "mode": "100755",
+        "object": "06ee2f37c0294fb9e8ff6457c88ac0200124188b"
+      },
+      {
+        "path": "tools/verify_clean_scaffold.sh",
+        "type": "file",
+        "mode": "100755",
+        "object": "3b029a6240080d83229cbded84bab38f280b465e"
+      },
+      {
+        "path": "tools/verify_exported_pack.gd",
+        "type": "file",
+        "mode": "100644",
+        "object": "8b8e4f96291cab870809d54c4f6bde1182f43d8f"
+      },
+      {
+        "path": "tools/verify_exported_pack.gd.uid",
+        "type": "file",
+        "mode": "100644",
+        "object": "da1eb24aff4da704f73c864031593b0d247e6f96"
+      },
+      {
+        "path": "web/loader-cjk.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "8c35c5633c7b6170774f7a8af6b36ebfe63763dd"
+      },
+      {
+        "path": "web/loading.before-auth.html",
+        "type": "file",
+        "mode": "100644",
+        "object": "633f9433f6a514f8ea372b710965496364752b14"
+      },
+      {
+        "path": "web/loading.html",
+        "type": "file",
+        "mode": "100644",
+        "object": "8fd4f28cd42f8e61fd9d852ee0e51a0eb9bb8f8b"
+      }
+    ]
+  },
+  "build": {
+    "snapshotId": "sha256:960c3cf827ec26240850d6266bd8b28d385e5b7f271e5a37a05b9449c81d4e62",
+    "toolchain": {
+      "engineVersion": "4.7.2.stable.official.ed1daf0bf",
+      "engineDigest": "sha256:8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+      "templates": {
+        "debug": "sha256:08962aefef811b603541d7951ac67ef00413aad2d978855183c28adee98f626a",
+        "release": "sha256:d3ee2f08cef0cf3cf6678a6355a92a8db48ccdd35cbd2e8bfd5f0e8a0b4032a0"
+      },
+      "runtimeDigest": "sha256:6f3914f360133ffa8386c294d7c49ecf739eef4922e7f74a2e20ef38c483cfbf"
+    },
+    "profile": "release",
+    "export": {
+      "profile": "release",
+      "snapshotId": "sha256:960c3cf827ec26240850d6266bd8b28d385e5b7f271e5a37a05b9449c81d4e62",
+      "files": {
+        "THIRD_PARTY_NOTICES.txt": "sha256:c729a77bf07eb9745b2d89c3ce4ead3357438366f41743d2755ae35f98509cf9",
+        "index.apple-touch-icon.png": "sha256:8d03df215bd92e5fcf7cfd4483da187cb02e4e3d4dc60c6d173b51141ef954c1",
+        "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+        "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+        "index.html": "sha256:83eb580145990cf471e695e74f16a9ef954b8f20e9b9825b73dc88f1124c232b",
+        "index.icon.png": "sha256:7234a7bc3309b3da43b9157a7851835af6209af2f3d088ba769a607c0b31c91b",
+        "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
+        "index.pck": "sha256:292524169f7ef7d875733cae16aa0c03498606f243850ad957eddc2683de9efe",
+        "index.png": "sha256:b248a35160b38a3e38ec3cb307cc31bea976dc3030825db51e34e75457c0b01c",
+        "index.wasm": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+        "open-source-licenses.html": "sha256:9215f5fdd50039a9b6f3d8f0271cbc21bbdf64b917fb118dd29c8a16b9974e00"
+      },
+      "digest": "sha256:6fea5361bc7ed35bb90f27517b9ddf39a1caee3a9058aab0fa33e52ca9258f13"
+    }
+  },
+  "artifacts": {
+    "wasm": {
+      "path": "/manus-storage/game/sha256/fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0.wasm",
+      "sha256": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "pck": {
+      "path": "/manus-storage/game/sha256/292524169f7ef7d875733cae16aa0c03498606f243850ad957eddc2683de9efe.pck",
+      "sha256": "sha256:292524169f7ef7d875733cae16aa0c03498606f243850ad957eddc2683de9efe"
+    }
+  },
+  "files": {
+    "THIRD_PARTY_NOTICES.txt": "sha256:c729a77bf07eb9745b2d89c3ce4ead3357438366f41743d2755ae35f98509cf9",
+    "game-sharing.json": "sha256:6d15e069dbb48c94852be64eaa1ec8aa4278cf7ed81dde4a6b3af1993a4c0957",
+    "index.apple-touch-icon.png": "sha256:8d03df215bd92e5fcf7cfd4483da187cb02e4e3d4dc60c6d173b51141ef954c1",
+    "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+    "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+    "index.html": "sha256:0105fe839301e265e295287596a5a52c91d4fa7121ed7ded27a8583384d1a3cd",
+    "index.icon.png": "sha256:7234a7bc3309b3da43b9157a7851835af6209af2f3d088ba769a607c0b31c91b",
+    "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
+    "index.png": "sha256:b248a35160b38a3e38ec3cb307cc31bea976dc3030825db51e34e75457c0b01c",
+    "open-source-licenses.html": "sha256:9215f5fdd50039a9b6f3d8f0271cbc21bbdf64b917fb118dd29c8a16b9974e00",
+    "share/7234a7bc3309b3da43b9157a7851835af6209af2f3d088ba769a607c0b31c91b.png": "sha256:7234a7bc3309b3da43b9157a7851835af6209af2f3d088ba769a607c0b31c91b"
+  }
+}
