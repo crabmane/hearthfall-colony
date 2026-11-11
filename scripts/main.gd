@@ -27,7 +27,7 @@ func _ready() -> void:
 	_build_layers()
 	_connect_hud()
 	hud.show_title(FileAccess.file_exists(ColonySim.SAVE_PATH))
-	camera.position = Vector2(HFDefs.MAP_W, HFDefs.MAP_H) * TILE * 0.5
+	camera.position = renderer.world_to_iso(Vector2(HFDefs.MAP_W, HFDefs.MAP_H) * 0.5)
 	_clamp_camera()
 	set_process(true)
 
@@ -53,11 +53,12 @@ func _build_layers() -> void:
 	camera.name = "WorldCamera"
 	camera.enabled = true
 	camera.zoom = Vector2(CAMERA_START_ZOOM, CAMERA_START_ZOOM)
-	camera.position = Vector2(HFDefs.MAP_W, HFDefs.MAP_H) * TILE * 0.5
-	camera.limit_left = 0
-	camera.limit_top = 0
-	camera.limit_right = HFDefs.MAP_W * int(TILE)
-	camera.limit_bottom = HFDefs.MAP_H * int(TILE)
+	camera.position = renderer.world_to_iso(Vector2(HFDefs.MAP_W, HFDefs.MAP_H) * 0.5)
+	# The renderer owns projected map bounds; use manual clamping below.
+	camera.limit_left = -100000
+	camera.limit_top = -100000
+	camera.limit_right = 100000
+	camera.limit_bottom = 100000
 	camera.limit_smoothed = false
 	world_root.add_child(camera)
 	camera.make_current()
@@ -235,14 +236,14 @@ func _center_on_building(building_id: int) -> void:
 	var building := sim.get_building(building_id)
 	if building.is_empty():
 		return
-	camera.position = sim.building_center(building) * TILE
+	camera.position = renderer.world_to_iso(sim.building_center(building))
 	_clamp_camera()
 	renderer.select_building(building_id)
 
 func _center_camera() -> void:
 	if sim == null:
 		return
-	camera.position = Vector2(sim.map_w, sim.map_h) * TILE * 0.5
+	camera.position = renderer.world_to_iso(Vector2(sim.map_w, sim.map_h) * 0.5)
 	_clamp_camera()
 
 # -----------------------------------------------------------------------------
@@ -421,8 +422,9 @@ func _screen_to_tile(screen_position: Vector2) -> Vector2i:
 	if camera == null:
 		return Vector2i(-1, -1)
 	var viewport_size := get_viewport_rect().size
-	var world_pos := camera.position + (screen_position - viewport_size * 0.5) / camera.zoom
-	return Vector2i(floori(world_pos.x / TILE), floori(world_pos.y / TILE))
+	var projected_pos := camera.position + (screen_position - viewport_size * 0.5) / camera.zoom
+	var logical_pos := renderer.iso_to_world(projected_pos)
+	return Vector2i(floori(logical_pos.x), floori(logical_pos.y))
 
 func _tile_in_bounds(tile: Vector2i) -> bool:
 	return sim != null and tile.x >= 0 and tile.y >= 0 and tile.x < sim.map_w and tile.y < sim.map_h
@@ -490,7 +492,9 @@ func _clamp_camera() -> void:
 		return
 	var viewport_size := get_viewport_rect().size
 	var half := viewport_size * 0.5 / camera.zoom
-	var map_pixel_size := Vector2(float(sim.map_w if sim != null else HFDefs.MAP_W), float(sim.map_h if sim != null else HFDefs.MAP_H)) * TILE
+	var map_w := float(sim.map_w if sim != null else HFDefs.MAP_W)
+	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
+	var map_pixel_size := Vector2((map_w + map_h) * TILE * 0.5, (map_w + map_h) * TILE * 0.25)
 	if half.x * 2.0 >= map_pixel_size.x:
 		camera.position.x = map_pixel_size.x * 0.5
 	else:

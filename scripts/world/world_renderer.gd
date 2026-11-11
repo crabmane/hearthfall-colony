@@ -25,6 +25,20 @@ const SNOW := Color("#dbe3d4")
 func setup(colony_sim: ColonySim, game_camera: Camera2D) -> void:
 	sim = colony_sim
 	camera = game_camera
+	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
+	# Keep simulation coordinates Cartesian; project only the rendered canvas.
+	# The basis vectors make each logical tile a 32x16 diamond.
+	transform = Transform2D(Vector2(T * 0.5, T * 0.25), Vector2(-T * 0.5, T * 0.25), Vector2(map_h * T * 0.5, 0.0))
+
+func world_to_iso(world: Vector2) -> Vector2:
+	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
+	return Vector2((world.x - world.y) * T * 0.5 + map_h * T * 0.5, (world.x + world.y) * T * 0.25)
+
+func iso_to_world(projected: Vector2) -> Vector2:
+	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
+	var u := (projected.x - map_h * T * 0.5) / (T * 0.5)
+	var v := projected.y / (T * 0.25)
+	return Vector2((u + v) * 0.5, (v - u) * 0.5)
 
 func set_hover(tile: Vector2i) -> void:
 	hover_tile = tile
@@ -50,10 +64,9 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 func _visible_rect() -> Rect2:
-	if camera == null:
-		return Rect2(Vector2.ZERO, Vector2(1280, 720))
-	var size := get_viewport_rect().size / camera.zoom
-	return Rect2(camera.position - size * 0.5, size)
+	# Culling in projected space is more expensive than this small colony map;
+	# keeping the full logical map visible also prevents edge pops while panning.
+	return Rect2(-100000.0, -100000.0, 200000.0, 200000.0)
 
 func _draw() -> void:
 	if sim == null or sim.tiles.is_empty():
@@ -150,14 +163,14 @@ func _collect_nature(view: Rect2, drawables: Array) -> void:
 			var key := str(tile.get("object", ""))
 			if key.is_empty() or int(tile.get("building_id", -1)) != -1:
 				continue
-			drawables.append({"kind": "nature", "key": key, "tile": Vector2i(x, y), "y": float(y + 1) * T})
+			drawables.append({"kind": "nature", "key": key, "tile": Vector2i(x, y), "y": float(x + y + 1) * T})
 
 func _collect_buildings(view: Rect2, drawables: Array) -> void:
 	for b in sim.buildings:
 		var origin: Vector2i = b["origin"]
 		var size: Vector2i = b["size"]
-		var bottom := float(origin.y + size.y) * T
-		var center_x := (float(origin.x) + float(size.x) * 0.5) * T
+		var bottom := float(origin.x + origin.y + size.x + size.y) * T
+		var center_x := (float(origin.x) - float(origin.y)) * T * 0.5
 		if center_x < view.position.x - 120.0 or center_x > view.end.x + 120.0 or bottom < view.position.y - 180.0 or bottom > view.end.y + 120.0:
 			continue
 		drawables.append({"kind": "building", "building": b, "y": bottom})
@@ -168,17 +181,17 @@ func _collect_piles(view: Rect2, drawables: Array) -> void:
 		var pos := (Vector2(tile) + Vector2(0.5, 0.72)) * T
 		if not view.has_point(pos):
 			continue
-		drawables.append({"kind": "pile", "pile": pile, "y": float(tile.y + 1) * T - 3.0})
+		drawables.append({"kind": "pile", "pile": pile, "y": float(tile.x + tile.y + 1) * T - 3.0})
 
 func _collect_colonists(drawables: Array) -> void:
 	for c in sim.colonists:
 		var pos := Vector2(c["pos"])
-		drawables.append({"kind": "colonist", "colonist": c, "y": pos.y * T})
+		drawables.append({"kind": "colonist", "colonist": c, "y": (pos.x + pos.y) * T})
 
 func _collect_animals(drawables: Array) -> void:
 	for animal in sim.animals:
 		var pos := Vector2(animal["pos"])
-		drawables.append({"kind": "animal", "animal": animal, "y": pos.y * T + 5.0})
+		drawables.append({"kind": "animal", "animal": animal, "y": (pos.x + pos.y) * T + 5.0})
 
 # -----------------------------------------------------------------------------
 # World objects
