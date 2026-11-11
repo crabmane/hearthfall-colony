@@ -128,8 +128,8 @@ func _activate_sim(new_sim: ColonySim) -> void:
 		sim.autosaved.connect(_on_cloud_autosave)
 	renderer.setup(sim, camera)
 	weather.setup(sim)
-	camera.limit_right = sim.map_w * int(TILE)
-	camera.limit_bottom = sim.map_h * int(TILE)
+	camera.limit_right = 100000
+	camera.limit_bottom = 100000
 	game_active = not sim.game_over
 	hud.show_game(sim)
 	if sim.game_over:
@@ -157,8 +157,8 @@ func _load_colony() -> void:
 	if sim.load_game(ColonySim.AUTOSAVE_PATH):
 		renderer.setup(sim, camera)
 		weather.setup(sim)
-		camera.limit_right = sim.map_w * int(TILE)
-		camera.limit_bottom = sim.map_h * int(TILE)
+		camera.limit_right = 100000
+		camera.limit_bottom = 100000
 		renderer.clear_selection()
 		hud.after_load()
 		game_active = not sim.game_over
@@ -348,6 +348,21 @@ func _handle_key(event: InputEventKey) -> void:
 		KEY_4:
 			if not _modal_open():
 				sim.set_speed(0)
+		KEY_Q:
+			if not _modal_open():
+				renderer.rotate_view(-PI * 0.5)
+		KEY_E:
+			if not _modal_open():
+				renderer.rotate_view(PI * 0.5)
+		KEY_R:
+			if not _modal_open():
+				renderer.adjust_tilt(0.035)
+		KEY_F:
+			if not _modal_open():
+				renderer.adjust_tilt(-0.035)
+		KEY_0:
+			if not _modal_open():
+				renderer.reset_view()
 
 func _modal_open() -> bool:
 	return hud.pause_overlay.visible or hud.help_overlay.visible or hud.work_overlay.visible or hud.game_over_overlay.visible or hud.confirm_overlay.visible or hud.cloud_overlay.visible or hud.advisor_overlay.visible
@@ -492,14 +507,12 @@ func _clamp_camera() -> void:
 		return
 	var viewport_size := get_viewport_rect().size
 	var half := viewport_size * 0.5 / camera.zoom
-	var map_w := float(sim.map_w if sim != null else HFDefs.MAP_W)
-	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
-	var map_pixel_size := Vector2((map_w + map_h) * TILE * 0.5, (map_w + map_h) * TILE * 0.25)
-	if half.x * 2.0 >= map_pixel_size.x:
-		camera.position.x = map_pixel_size.x * 0.5
+	var bounds := renderer.projected_bounds()
+	if half.x * 2.0 >= bounds.size.x:
+		camera.position.x = bounds.position.x + bounds.size.x * 0.5
 	else:
-		camera.position.x = clampf(camera.position.x, half.x, map_pixel_size.x - half.x)
-	if half.y * 2.0 >= map_pixel_size.y:
-		camera.position.y = map_pixel_size.y * 0.5
+		camera.position.x = clampf(camera.position.x, bounds.position.x + half.x, bounds.end.x - half.x)
+	if half.y * 2.0 >= bounds.size.y:
+		camera.position.y = bounds.position.y + bounds.size.y * 0.5
 	else:
-		camera.position.y = clampf(camera.position.y, half.y, map_pixel_size.y - half.y)
+		camera.position.y = clampf(camera.position.y, bounds.position.y + half.y, bounds.end.y - half.y)

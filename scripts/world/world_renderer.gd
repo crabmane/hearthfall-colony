@@ -9,6 +9,16 @@ var selected_building_id: int = -1
 var tool_mode: String = ""
 var build_key: String = ""
 var anim_time: float = 0.0
+var view_rotation: float = 0.0
+var target_view_rotation: float = 0.0
+var view_tilt: float = 0.25
+var target_view_tilt: float = 0.25
+var static_drawables: Array = []
+var static_cache_age: float = 999.0
+
+const STATIC_CACHE_REFRESH := 0.18
+const TILT_MIN := 0.18
+const TILT_MAX := 0.38
 
 const T := 32.0
 const GRASS_A := Color("#405b3d")
@@ -25,20 +35,44 @@ const SNOW := Color("#dbe3d4")
 func setup(colony_sim: ColonySim, game_camera: Camera2D) -> void:
 	sim = colony_sim
 	camera = game_camera
+	static_cache_age = STATIC_CACHE_REFRESH
+	_apply_view_transform(true)
+
+func _apply_view_transform(snap: bool = false) -> void:
 	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
-	# Keep simulation coordinates Cartesian; project only the rendered canvas.
-	# The basis vectors make each logical tile a 32x16 diamond.
-	transform = Transform2D(Vector2(T * 0.5, T * 0.25), Vector2(-T * 0.5, T * 0.25), Vector2(map_h * T * 0.5, 0.0))
+	var origin := Vector2(map_h * T * 0.5, 0.0)
+	var basis_x := Vector2(T * 0.5, T * view_tilt).rotated(view_rotation)
+	var basis_y := Vector2(-T * 0.5, T * view_tilt).rotated(view_rotation)
+	var old_center := world_to_iso(Vector2((sim.map_w if sim != null else HFDefs.MAP_W) * 0.5, (sim.map_h if sim != null else HFDefs.MAP_H) * 0.5))
+	transform = Transform2D(basis_x, basis_y, origin)
+	var new_center := world_to_iso(Vector2((sim.map_w if sim != null else HFDefs.MAP_W) * 0.5, (sim.map_h if sim != null else HFDefs.MAP_H) * 0.5))
+	if camera != null and not snap:
+		camera.position += new_center - old_center
+
+func rotate_view(step: float) -> void:
+	target_view_rotation += step
+
+func adjust_tilt(amount: float) -> void:
+	target_view_tilt = clampf(target_view_tilt + amount, TILT_MIN, TILT_MAX)
+
+func reset_view() -> void:
+	target_view_rotation = 0.0
+	target_view_tilt = 0.25
 
 func world_to_iso(world: Vector2) -> Vector2:
-	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
-	return Vector2((world.x - world.y) * T * 0.5 + map_h * T * 0.5, (world.x + world.y) * T * 0.25)
+	return transform * (world * T)
 
 func iso_to_world(projected: Vector2) -> Vector2:
+	return (transform.affine_inverse() * projected) / T
+
+func projected_bounds() -> Rect2:
+	var map_w := float(sim.map_w if sim != null else HFDefs.MAP_W)
 	var map_h := float(sim.map_h if sim != null else HFDefs.MAP_H)
-	var u := (projected.x - map_h * T * 0.5) / (T * 0.5)
-	var v := projected.y / (T * 0.25)
-	return Vector2((u + v) * 0.5, (v - u) * 0.5)
+	var corners := [transform * Vector2.ZERO, transform * Vector2(map_w * T, 0.0), transform * Vector2(map_w * T, map_h * T), transform * Vector2(0.0, map_h * T)]
+	var bounds := Rect2(corners[0], Vector2.ZERO)
+	for point in corners:
+		bounds = bounds.expand(point)
+	return bounds
 
 func set_hover(tile: Vector2i) -> void:
 	hover_tile = tile
@@ -61,21 +95,43 @@ func clear_selection() -> void:
 
 func _process(delta: float) -> void:
 	anim_time += delta
+	static_cache_age += delta
+	var rotation_delta := absf(wrapf(target_view_rotation - view_rotation, -PI, PI))
+	var tilt_delta := absf(target_view_tilt - view_tilt)
+	if rotation_delta > 0.0005 or tilt_delta > 0.0005:
+		var old_center := world_to_iso(Vector2((sim.map_w if sim != null else HFDefs.MAP_W) * 0.5, (sim.map_h if sim != null else HFDefs.MAP_H) * 0.5))
+		view_rotation = lerp_angle(view_rotation, target_view_rotation, minf(1.0, delta * 8.0))
+		view_tilt = lerpf(view_tilt, target_view_tilt, minf(1.0, delta * 8.0))
+		_apply_view_transform(true)
+		if camera != null:
+			var new_center := world_to_iso(Vector2((sim.map_w if sim != null else HFDefs.MAP_W) * 0.5, (sim.map_h if sim != null else HFDefs.MAP_H) * 0.5))
+			camera.position += new_center - old_center
 	queue_redraw()
 
 func _visible_rect() -> Rect2:
-	# Culling in projected space is more expensive than this small colony map;
-	# keeping the full logical map visible also prevents edge pops while panning.
-	return Rect2(-100000.0, -100000.0, 200000.0, 200000.0)
+	if camera == null:
+		return Rect2(Vector2.ZERO, Vector2(sim.map_w * T, sim.map_h * T))
+	var half := get_viewport_rect().size * 0.5 / camera.zoom
+	var corners := [camera.position - half, camera.position + Vector2(half.x, -half.y), camera.position + half, camera.position + Vector2(-half.x, half.y)]
+	var local_points: Array[Vector2] = []
+	for point in corners:
+		local_points.append(transform.affine_inverse() * point)
+	var bounds := Rect2(local_points[0], Vector2.ZERO)
+	for point in local_points:
+		bounds = bounds.expand(point)
+	return bounds
 
 func _draw() -> void:
 	if sim == null or sim.tiles.is_empty():
 		return
 	var view := _visible_rect().grow(96.0)
 	_draw_ground(view)
-	var drawables: Array = []
-	_collect_nature(view, drawables)
-	_collect_buildings(view, drawables)
+	if static_cache_age >= STATIC_CACHE_REFRESH or static_drawables.is_empty():
+		static_drawables.clear()
+		_collect_nature(view, static_drawables)
+		_collect_buildings(view, static_drawables)
+		static_cache_age = 0.0
+	var drawables: Array = static_drawables.duplicate()
 	_collect_piles(view, drawables)
 	_collect_colonists(drawables)
 	_collect_animals(drawables)

@@ -1715,7 +1715,7 @@ func _build_help_overlay() -> void:
 	var controls := VBoxContainer.new()
 	controls_panel.add_child(controls)
 	controls.add_child(HFUI.eyebrow("Controls", HFUI.AMBER))
-	controls.add_child(HFUI.label("WASD / arrow keys: move camera   ·   Mouse wheel: zoom   ·   Middle-drag: pan   ·   Right-click: cancel tool or close panels", 10, HFUI.MUTED))
+	controls.add_child(HFUI.label("WASD / arrows: move   ·   Q / E: smooth rotate   ·   R / F: tilt   ·   0: reset view   ·   Wheel: zoom   ·   Middle-drag: pan   ·   Right-click: cancel", 10, HFUI.MUTED))
 	controls.add_child(HFUI.label("Space: pause / resume   ·   F6: save   ·   F10: load autosave   ·   Esc: close menus or pause", 10, HFUI.MUTED))
 	controls.add_child(HFUI.label("The colony autosaves every dawn. New colonies overwrite the previous save at the next autosave.", 10, HFUI.SUBTLE))
 
